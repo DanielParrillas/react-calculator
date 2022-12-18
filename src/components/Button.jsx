@@ -10,6 +10,7 @@ function Button(props) {
       className={`container-button ${
         isOperator(props.children) ? "operator" : ""
       }`.trim()}
+      onClick={() => props.buttonFuction(props.children)}
     >
       {props.children}
     </div>
