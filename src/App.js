@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./images/logo.png";
-import Button from "./components/Button";
+import Button from "./components/Button.jsx";
+import Screen from "./components/Screen.jsx";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img className="logo" src={logo} alt="logo" />
       </div>
       <div className="container-calculator">
+        <Screen />
         <div className="row">
           <Button>1</Button>
           <Button>2</Button>
