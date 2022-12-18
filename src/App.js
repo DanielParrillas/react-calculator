@@ -4,12 +4,17 @@ import Button from "./components/Button.jsx";
 import Screen from "./components/Screen.jsx";
 import ButtonClear from "./components/ButtonClear";
 import { useState } from "react";
+import { evaluate } from "mathjs";
 
 function App() {
   const [input, setInput] = useState("");
 
   const addInput = (value) => {
     setInput(input + value);
+  };
+
+  const showResult = () => {
+    setInput(evaluate(input));
   };
 
   return (
@@ -38,13 +43,13 @@ function App() {
           <Button buttonFuction={addInput}>*</Button>
         </div>
         <div className="row">
-          <Button buttonFuction={addInput}>=</Button>
+          <Button buttonFuction={showResult}>=</Button>
           <Button buttonFuction={addInput}>0</Button>
           <Button buttonFuction={addInput}>.</Button>
           <Button buttonFuction={addInput}>/</Button>
         </div>
         <div className="row">
-          <ButtonClear>Clear</ButtonClear>
+          <ButtonClear buttonFuction={() => setInput("")}>Clear</ButtonClear>
         </div>
       </div>
     </div>
