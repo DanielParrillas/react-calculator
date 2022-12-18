@@ -14,7 +14,8 @@ function App() {
   };
 
   const showResult = () => {
-    setInput(evaluate(input));
+    if (input) setInput(evaluate(input));
+    else alert("Enter values to calculate");
   };
 
   return (
