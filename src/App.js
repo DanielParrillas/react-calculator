@@ -14,8 +14,13 @@ function App() {
   };
 
   const showResult = () => {
-    if (input) setInput(evaluate(input));
-    else alert("Enter values to calculate");
+    if (input) {
+      try {
+        setInput(evaluate(input));
+      } catch (error) {
+        alert("Invalid mathematical expression");
+      }
+    } else alert("Enter values to calculate");
   };
 
   return (
