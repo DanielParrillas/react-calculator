@@ -2,6 +2,7 @@ import "./App.css";
 import logo from "./images/logo.png";
 import Button from "./components/Button.jsx";
 import Screen from "./components/Screen.jsx";
+import ButtonClear from "./components/ButtonClear";
 
 function App() {
   return (
@@ -35,7 +36,9 @@ function App() {
           <Button>.</Button>
           <Button>/</Button>
         </div>
-        <div className="row"></div>
+        <div className="row">
+          <ButtonClear>Clear</ButtonClear>
+        </div>
       </div>
     </div>
   );
