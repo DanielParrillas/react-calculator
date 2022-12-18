@@ -1,9 +1,9 @@
 import "../styles/ButtonClear.scss";
 
 const ButtonClear = (props) => (
-  <div className="button-clear" onClick={() => props.buttonFuction()}>
+  <button className="button-clear" onClick={() => props.buttonFuction()}>
     {props.children}
-  </div>
+  </button>
 );
 
 export default ButtonClear;
